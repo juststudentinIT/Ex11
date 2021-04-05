@@ -1,26 +1,26 @@
-//Copyright 2021 FOM
+// Copyright 2021 FOM
 #include "train.h"
 #include <iostream>
 #include <cstdlib>
 
 void Cage::on() {
-	light = true;
+   light = true;
 }
 void Cage::off() {
-	light = false;
+    light = false;
 }
 bool Cage::get() const {
-	return light;
+    return light;
 }
 Train::Train() {
-	this->first = nullptr;
-	this->last = nullptr;
+    this->first = nullptr;
+    this->last = nullptr;
 }
 void Train::Add_cage() {
     int i = 0;
     while (i < lenght) {
         Cage* cage_ = new Cage;
-        unsigned int seed = std::time(NULL);
+        unsigned int seed = time(nullptr);
         int state = rand_r(&seed) % 100;
         if ((state / 2) == 0) {
             cage_->on();
@@ -54,8 +54,7 @@ void Train::print() {
         if (ptr->get()) {
             std::cout << "- Cage - " << i << " - state - true "
                 << std::endl;
-        }
-        else {
+        } else {
             std::cout << "- Cage - " << i << " - state - false"
                 << std::endl;
         }
@@ -65,8 +64,7 @@ void Train::print() {
     if (ptr->get()) {
         std::cout << "- Cage - " << i << " - state - true "
             << std::endl;
-    }
-    else {
+    } else {
         std::cout << "- Cage - " << i << " - state - false"
             << std::endl;
     }
@@ -89,8 +87,8 @@ int Train::search_for_train_length() {
     return count;
 }
 void Train::set_lenght(int lenght) {
-	this->lenght = lenght;
+    this->lenght = lenght;
 }
 int Train::get_lenght() {
-	return lenght;
+    return lenght;
 }

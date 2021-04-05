@@ -1,7 +1,7 @@
-//Copyright 2021 FOM
+// Copyright 2021 FOM
 #ifndef INCLUDE_TRAIN_H_
 #define INCLUDE_TRAIN_H_
-
+#include <iostream>
 class Cage {
  private:
     bool light;
@@ -26,4 +26,4 @@ class Train {
     void set_lenght(int lenght);
     int get_lenght();
 };
-#endif // INCLUDE_TRAIN_H_
+#endif  // INCLUDE_TRAIN_H_

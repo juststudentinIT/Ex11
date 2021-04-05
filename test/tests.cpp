@@ -19,7 +19,8 @@ TEST(Train_Test, test2) {
 
 TEST(Train_Test, test3) {
     Train train_3;
-    int size = rand() % 100 + 3;
+    unsigned int seed = time(nullptr);
+    int size = rand_r(&seed) % 100 + 3;
     train_3.set_lenght(size);
     train_3.Add_cage();
     EXPECT_EQ(size, train_3.search_for_train_length());
