@@ -7,5 +7,5 @@ int main() {
     test_train.Add_cage();
     test_train.print();
     std::cout << test_train.search_for_train_length() << std::endl;
-	return 0;
+    return 0;
 }

@@ -4,7 +4,7 @@
 #include <cstdlib>
 
 void Cage::on() {
-   light = true;
+    light = true;
 }
 void Cage::off() {
     light = false;
