@@ -1,10 +1,11 @@
-// Copyright 2021
-#include <iostream>
-#include <string>
-
+//Copyright 2021 FOM
 #include "train.h"
-
+#include <iostream>
 int main() {
-  return 0;
+	Train test_train;
+	test_train.set_lenght(23);
+	test_train.Add_cage();
+	test_train.print();
+	std::cout << test_train.search_for_train_length() << std::endl;
+	return 0;
 }
-
